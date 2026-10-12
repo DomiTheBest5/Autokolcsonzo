@@ -1,0 +1,46 @@
+﻿<Window x:Class="Autokolcsonzo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Autokolcsonzo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Margin="20">
+                <TextBlock Text="Autókölcsönző" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+                <TextBlock Text="Név:"/>
+                <TextBox x:Name="txtNev" Margin="0,5,0,10"/>
+                <TextBlock Text="Életkor:"/>
+                <TextBox x:Name="txtKor" Margin="0,5,0,10"/>
+                <TextBlock Text="Jogosítvány száma:"/>
+                <TextBox x:Name="txtJogositvanySzam" Margin="0,5,0,10"/>
+                <TextBlock Text="Autó:"/>
+                <ComboBox x:Name="cmbAutok" Margin="0,5,0,10">
+                    <ComboBoxItem Content="Suzuki Swift - 12 000 Ft/nap"/>
+                    <ComboBoxItem Content="Toyota Corolla - 18 000 Ft/nap"/>
+                    <ComboBoxItem Content="BMW 3 - 30 000 Ft/nap"/>
+                    <ComboBoxItem Content="Tesla Model 3 - 35 000 Ft/nap"/>
+                </ComboBox>
+                <TextBlock Text="Bérlés időtartama:"/>
+                <TextBox x:Name="txtBerlesIdotartama" Margin="0,5,0,10"/>
+                <TextBlock Text="Biztosítás:"/>
+                <RadioButton x:Name="rbIngyen" Content="Alap biztosítás - Ingyenes" GroupName="biztositas"/>
+                <RadioButton x:Name="rbExtra" Content="Extra biztosítás - +3 000 Ft/nap" GroupName="biztositas"/>
+                <RadioButton x:Name="rbTeljes" Content="Teljes biztosítás - +6 000 Ft/nap" GroupName="biztositas"/>
+                <TextBlock Text="Extrák:" Margin="0,10,0,0"/>
+                <CheckBox x:Name="chkGPS" Content="GPS - +1000 Ft/nap"/>
+                <CheckBox x:Name="chkGyerekUles" Content="Gyerekülés - +1500 Ft/nap"/>
+                <CheckBox x:Name="chkExtraSofor" Content="Extra sofőr - +2500 Ft/nap"/>
+                <CheckBox x:Name="chkAutopalyaMatrica" Content="Autópálya matrica - +5000 Ft egyszeri díj"/>
+                <TextBlock Text="Fizetési mód:" Margin="0,10,0,0"/>
+                <RadioButton x:Name="rbKeszpenz" Content="Készpénz" GroupName="fizetes"/>
+                <RadioButton x:Name="rbBankkartya" Content="Bankkártya" GroupName="fizetes"/>
+                <TextBlock Text="Feltételek elfogadása:" Margin="0,10,0,0"/>
+                <CheckBox x:Name="chkFeltetelek" Content="Elfogadom a bérlési feltételeket"/>
+                <Button Content="Foglalás" Click="Button_Click" Height="40"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
